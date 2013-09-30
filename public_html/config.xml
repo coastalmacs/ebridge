@@ -5,7 +5,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "eBridge"
         version   = "0.1.0"
-        versionCode = "0.0.1">
+        versionCode = "0.1.0">
 
     <name>eBridge</name>
 
