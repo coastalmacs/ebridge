@@ -41,9 +41,11 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.mobile-1.3.2.js"></script>
         
+        <script src="content/eBridge.js"></script>
+        
         
     </head>
-    <body>
+    <body onload="checkStudentName();">
 
         <!-- Add your site or application content here -->
 
@@ -63,29 +65,45 @@
         <div data-role="page">
 
 	<div data-role="header">
-                <h1>eBridge 2014 v0.1 </h1>
+                <h1>eBridge 2014 v0.1</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">		
             <img src="content/logo.png" height="300" width="300" style="margin-left: auto; margin-right: auto;" />
-             <div data-role="fieldcontain">
-            <input name="" id="textinput2" placeholder="" value="" type="text">
-        </div>
-        <a data-role="button" href="#page1">
+
+            <div data-role="fieldcontain">
+
+                <input name="studentName" id="studentName" placeholder="Enter your DEC username" value="" type="text">
+            </div>
+        <a data-role="button" href="#page1" onclick="login();">
             Login
         </a>
-        <a data-role="button" href="#page1">
-            Reset
-        </a>
+
+            
+            <p id="test"></p>
           
 	</div><!-- /content -->
 	
+        
+        
 	<div data-role="footer">
-		<h4>Footer content</h4>
+		<h4></h4>
 	</div><!-- /footer -->
+        
+        
 	
 </div><!-- /page -->
-        
+   
+        <div data-role="dialog" id="dialog">
+		<div data-role="header" data-theme="d">
+			<h1>Create new user?</h1>
+		</div>
+		<div data-role="content" data-theme="c">
+			<p>You have entered a new username. If you continue, any existing data will be deleted.</p>
+			<a href="content/main.html" data-role="button" data-theme="b" onclick="createUser();">Create new user</a>       
+			<a href="index.html" data-role="button" data-rel="back" data-theme="c">Cancel</a>    
+		</div>
+	</div>
         
     </body>
 </html>
