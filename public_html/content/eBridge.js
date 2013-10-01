@@ -4,6 +4,16 @@
  */
 var storage = window.localStorage;
 
+//Exit on back button
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+function onBackKeyDown() {
+    navigator.app.exitApp();
+}
+
 //window.onload = checkStudentName();
 
 function login()
